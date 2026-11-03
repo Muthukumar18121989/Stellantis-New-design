@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" data-cxo-theme="wallStreet" data-cxo-font="editorial">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Promotion Admin Dashboard</title>
+  <link rel="stylesheet" href="cxo/fonts.css">
+  <link rel="stylesheet" href="cxo/tokens.css">
+  <script>try{if(localStorage.getItem("promotool-nav")==="collapsed")document.documentElement.classList.add("is-nav-collapsed")}catch(e){}</script>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/user-menu.css">
+  <link rel="stylesheet" href="css/cxo-app.css">
+</head>
+<body>
+<div class="page page--dashboard">
+
+  <!-- App menu bar (CXO SidebarShell + NavItem). Collapse state is kept per browser by js/cxo-shell.js. -->
+  <aside class="sidebar" id="app-sidebar" aria-label="Main menu">
+    <div class="sidebar__brand">
+      <span class="sidebar__badge" aria-hidden="true">PT</span>
+      <span class="sidebar__name"><span class="sidebar__title">Promotool</span><span class="sidebar__sub">Stellantis</span></span>
+      <button class="sidebar__toggle" type="button" data-nav-toggle aria-label="Collapse menu" aria-controls="app-sidebar" aria-expanded="true"><svg class="i-close" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="m16 15-3-3 3-3"/></svg><svg class="i-open" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="m14 9 3 3-3 3"/></svg></button>
+    </div>
+    <div class="sidebar__scroll">
+      <nav class="sidebar__nav" aria-label="Primary">
+        <div class="sidebar__section">Administration</div>
+        <a class="nav-item is-active" href="experiments.html" aria-current="page" title="Home"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span class="nav-item__label">Home</span></a>
+        <a class="nav-item" href="doa-rules.html" title="Delegation of Authority (DOA) Rules"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/></svg><span class="nav-item__label">DOA Rules</span></a>
+        <a class="nav-item" href="user-management.html" title="User Management"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span class="nav-item__label">User Management</span></a>
+        <a class="nav-item" href="role-management.html" title="Role Management"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg><span class="nav-item__label">Role Management</span></a>
+        <a class="nav-item" href="referential.html" title="Referential"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg><span class="nav-item__label">Referential</span></a>
+      </nav>
+    </div>
+    <div class="sidebar__footer">
+      <div class="sidebar__utils">
+        <button class="notif sidebar__icon-btn" type="button" aria-label="Notifications (5)" title="Notifications"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="notif__count">5</span></button>
+        <button class="lang" type="button" title="Language"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span class="lang__label">English</span></button>
+      </div>
+      <button class="profile" type="button" title="Kristen, Promotool Admin">
+        <span class="profile__avatar" aria-hidden="true">K</span>
+        <span class="profile__text"><span class="profile__name">Kristen</span><span class="profile__role">Promotool Admin</span></span>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
+      </button>
+    </div>
+  </aside>
+  <div class="sidebar-scrim" data-nav-close hidden></div>
+
+  <div class="main">
+
+    <!-- Phone / small tablet: the menu bar becomes a drawer opened from here -->
+    <div class="mobile-bar">
+      <button class="icon-btn" type="button" data-nav-open aria-label="Open menu" aria-controls="app-sidebar"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
+      <span class="sidebar__badge" aria-hidden="true">PT</span><span class="mobile-bar__title">Promotool</span>
+    </div>
+
+    <!-- Page header (Figma 3:12307) -->
+    <section class="page-header">
+      <div class="page-header__inner">
+        <div class="breadcrumb">
+          <img src="assets/icons/breadcrumb-home.svg" width="16" height="16" alt="Home">
+          <span class="breadcrumb__sep">/</span>
+          <span class="breadcrumb__current">Promotool Admin Dashboard</span>
+        </div>
+        <div>
+          <h1 class="page-header__title">Promotion Admin Dashboard</h1>
+          <p class="page-header__subtitle">Real-time metrics and activity across all promotion pipelines.</p>
+        </div>
+      </div>
+    </section>
+
+    <main class="content">
+
+      <!-- Filters (Figma 3:12446) -->
+      <section class="filters">
+        <div class="filters__fields">
+          <button class="field">
+            <span class="field__label">Start</span>
+            <span class="field__control">
+              <span class="field__value field__value--noto">mm/dd/yyy</span>
+              <img src="assets/icons/chevron-down.svg" width="16" height="16" alt="">
+            </span>
+          </button>
+          <button class="field">
+            <span class="field__label">End</span>
+            <span class="field__control">
+              <span class="field__value field__value--poppins">mm/dd/yyyy</span>
+              <img src="assets/icons/chevron-down.svg" width="16" height="16" alt="">
+            </span>
+          </button>
+        </div>
+        <div class="filters__actions">
+          <div class="filters__primary">
+            <button class="icon-btn" aria-label="Refresh"><img src="assets/icons/refresh.svg" width="16" height="16" alt=""></button>
+            <button class="btn-primary">Apply</button>
+          </div>
+          <button class="icon-btn" aria-label="Download"><img src="assets/icons/download.svg" width="16" height="16" alt=""></button>
+        </div>
+      </section>
+
+      <!-- Region tabs (Figma 3:12470) -->
+      <div class="tabs">
+        <div class="tabs__list" role="tablist">
+          <button class="tab tab--active" role="tab" aria-selected="true"><span class="tab__inner"><span class="tab__label">EE</span><span class="tab__bar"></span></span></button>
+          <button class="tab" role="tab" aria-selected="false"><span class="tab__inner"><span class="tab__label">MEA</span><span class="tab__bar"></span></span></button>
+          <button class="tab" role="tab" aria-selected="false"><span class="tab__inner"><span class="tab__label">IAP</span><span class="tab__bar"></span></span></button>
+          <button class="tab" role="tab" aria-selected="false"><span class="tab__inner"><span class="tab__label">SA</span><span class="tab__bar"></span></span></button>
+        </div>
+      </div>
+
+      <!-- NSC / Importers (Figma 3:12480) -->
+      <div class="segments">
+        <div class="segments__list">
+          <button class="segment segment--active">NSC</button>
+          <button class="segment">Importers</button>
+        </div>
+      </div>
+
+      <!-- Charts (Figma 3:12488) -->
+      <div class="charts">
+        <section class="card">
+          <div class="card__head"><h2 class="card__title">Pending by Market</h2></div>
+          <div class="chart">
+            <div class="chart__pie"><img src="assets/charts/pending-by-market.svg" width="229" height="229" alt="Pending by Market donut chart"></div>
+            <div class="legend">
+              <div class="legend__col">
+                <div class="legend__item"><span class="legend__dot" style="background:#1B3A6B"></span><span class="legend__name">Austria</span><span class="legend__value">32%</span></div>
+                <div class="legend__item"><span class="legend__dot" style="background:#B89B5E"></span><span class="legend__name">Italy</span><span class="legend__value">32%</span></div>
+              </div>
+              <div class="legend__col">
+                <div class="legend__item"><span class="legend__dot" style="background:#2D6B4A"></span><span class="legend__name">Belgium</span><span class="legend__value">32%</span></div>
+                <div class="legend__item"><span class="legend__dot" style="background:#A8453B"></span><span class="legend__name">Netherlands</span><span class="legend__value">32%</span></div>
+              </div>
+              <div class="legend__col">
+                <div class="legend__item"><span class="legend__dot" style="background:#B5862C"></span><span class="legend__name">France</span><span class="legend__value">32%</span></div>
+                <div class="legend__item"><span class="legend__dot" style="background:#475569"></span><span class="legend__name">Portugal</span><span class="legend__value">32%</span></div>
+              </div>
+              <div class="legend__col">
+                <div class="legend__item"><span class="legend__dot" style="background:#34568A"></span><span class="legend__name">Germany</span><span class="legend__value">32%</span></div>
+                <div class="legend__item"><span class="legend__dot" style="background:#7F6938"></span><span class="legend__name">Spain</span><span class="legend__value">32%</span></div>
+              </div>
+              <div class="legend__col">
+                <div class="legend__item"><span class="legend__dot" style="background:#9DA6B0"></span><span class="legend__name">UK</span><span class="legend__value">32%</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card__head"><h2 class="card__title">Pending by Violation Market</h2></div>
+          <div class="chart">
+            <div class="chart__pie"><img src="assets/charts/pending-by-violation-market.svg" width="229" height="229" alt="Pending by Violation Market donut chart"></div>
+            <div class="legend">
+              <div class="legend__col">
+                <div class="legend__item"><span class="legend__dot" style="background:#1B3A6B"></span><span class="legend__name">Article negative margin</span><span class="legend__value">32%</span></div>
+                <div class="legend__item"><span class="legend__dot" style="background:#2D6B4A"></span><span class="legend__name">Financial Impact</span><span class="legend__value">32%</span></div>
+              </div>
+              <div class="legend__col">
+                <div class="legend__item"><span class="legend__dot" style="background:#B89B5E"></span><span class="legend__name">Family cluster margin</span><span class="legend__value">32%</span></div>
+                <div class="legend__item"><span class="legend__dot" style="background:#475569"></span><span class="legend__name">Promotion budget</span><span class="legend__value">32%</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Stat cards (Figma 3:13555) -->
+      <div class="stats">
+        <div class="stat">
+          <span class="stat__icon"><img src="assets/icons/notes.svg" width="24" height="24" alt=""></span>
+          <div class="stat__body"><p class="stat__label">Total Requests</p><p class="stat__value">16</p></div>
+        </div>
+        <div class="stat">
+          <span class="stat__icon"><img src="assets/icons/clock.svg" width="24" height="24" alt=""></span>
+          <div class="stat__body"><p class="stat__label">Pending Approvals</p><p class="stat__value">13</p></div>
+        </div>
+        <div class="stat">
+          <span class="stat__icon"><img src="assets/icons/alert-circle.svg" width="24" height="24" alt=""></span>
+          <div class="stat__body"><p class="stat__label">Returned for Work</p><p class="stat__value">2</p></div>
+        </div>
+        <div class="stat">
+          <span class="stat__icon"><img src="assets/icons/alert-circle.svg" width="24" height="24" alt=""></span>
+          <div class="stat__body"><p class="stat__label">Closed Today</p><p class="stat__value">7</p></div>
+        </div>
+      </div>
+
+      <!-- Requests table (Figma 3:13666) -->
+      <section class="table-card">
+        <div class="table-card__inner">
+          <div class="table-wrap">
+            <table class="requests">
+              <colgroup>
+                <col style="width:123px"><col style="width:121px"><col style="width:120px"><col style="width:92px"><col style="width:124px"><col style="width:172px"><col style="width:172px"><col style="width:156px"><col style="width:162px">
+              </colgroup>
+              <thead>
+                <tr><th>Request ID</th><th>Promotion ID</th><th>Promo Name</th><th>Market</th><th>Approval Level</th><th>Approval Parameter</th><th>Promotion Pilot</th><th>Current Lane</th><th>Request Status</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="is-light">RQ123456</td><td class="is-bold">PR890123</td><td class="is-bold">Spring Promo</td><td>France</td><td>L1.2</td><td>Family cluster margin</td><td>Submuefant</td><td>Finance Team</td>
+                  <td><span class="badge badge--progress"><img src="assets/shapes/dot-teal.svg" width="8" height="8" alt=""><span class="badge__text">In Progress</span></span></td>
+                </tr>
+                <tr>
+                  <td class="is-light">RQ1002</td><td class="is-bold">PR1002</td><td class="is-bold">Brake Promo</td><td>Italy</td><td>L1.1</td><td>Article negative margin</td><td>Mary Miller</td><td>Marketing Team</td>
+                  <td><span class="badge badge--pending"><img src="assets/shapes/dot-yellow.svg" width="8" height="8" alt=""><span class="badge__text">Pending</span></span></td>
+                </tr>
+                <tr>
+                  <td class="is-light">RQ1003</td><td class="is-bold">PR1003</td><td class="is-bold">Summer Sale</td><td>Germany</td><td>L2.1</td><td>Promotion budget</td><td>Sarah Jenkins</td><td>Marketing Team</td>
+                  <td><span class="badge badge--progress"><img src="assets/shapes/dot-teal.svg" width="8" height="8" alt=""><span class="badge__text">In Progress</span></span></td>
+                </tr>
+                <tr>
+                  <td class="is-light">RQ1004</td><td class="is-bold">PR1004</td><td class="is-bold">Winter Clearance</td><td>UK</td><td>L2.2</td><td>Family cluster margin</td><td>David Miller</td><td>Finance Team</td>
+                  <td><span class="badge badge--pending"><img src="assets/shapes/dot-yellow.svg" width="8" height="8" alt=""><span class="badge__text">Pending</span></span></td>
+                </tr>
+                <tr>
+                  <td class="is-light">RQ1005</td><td class="is-bold">PR1005</td><td class="is-bold">Easter Special</td><td>Spain</td><td>L2.1</td><td>Article negative margin</td><td>John Doe</td><td>Marketing Team</td>
+                  <td><span class="badge badge--pending"><img src="assets/shapes/dot-yellow.svg" width="8" height="8" alt=""><span class="badge__text">Returned for rework</span></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-footer">
+            <p class="table-footer__summary">Showing 1 of 10 entries</p>
+            <nav class="pagination" aria-label="Pagination">
+              <button class="pagination__arrow pagination__arrow--prev" aria-label="Previous page"><img src="assets/icons/arrow-up.svg" width="16" height="16" alt=""></button>
+              <button class="pagination__page pagination__page--current" aria-current="page"><span>1</span></button>
+              <button class="pagination__page"><span>2</span></button>
+              <button class="pagination__page"><span>3</span></button>
+              <button class="pagination__page"><span>4</span></button>
+              <button class="pagination__page"><span>5</span></button>
+              <button class="pagination__arrow pagination__arrow--next" aria-label="Next page"><img src="assets/icons/arrow-up.svg" width="16" height="16" alt=""></button>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+  <script src="js/cxo-shell.js"></script>
+  <script src="js/user-menu.js"></script>
+</body>
+</html>
