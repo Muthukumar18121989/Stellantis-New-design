@@ -290,3 +290,34 @@ input[type="checkbox"]:not(.pp-toggle) { accent-color: var(--c-brand); }
 /* Workflow lifecycle: review stages are columns divided by hairlines, not boxed cards */
 .main .wf-card .wf-stage { background: transparent !important; border: 0 !important; box-shadow: none !important; border-radius: 0 !important; }
 .main .wf-card .wf-table-wrap::after { display: none; } .main .wf-card .wf-stage { padding: 8px 4px; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   15. TABLE CELLS (Muthu, 2026-11-03): every header is centred, and no cell text touches or crosses
+   its cell lines (12px minimum side padding; long headers wrap instead of being clipped)
+   ═══════════════════════════════════════════════════════════════════════ */
+.main table th, dialog table th {
+  text-align: center !important; vertical-align: middle !important;
+  padding-left: 12px !important; padding-right: 12px !important;
+  white-space: normal !important; overflow: visible !important;
+}
+.main table th > *, dialog table th > * { justify-content: center !important; text-align: center !important; margin-left: auto !important; margin-right: auto !important; }
+.main table th > :is(label, span, div)[style*="display: flex"], .main table th > :is(.promos__id, .fam-id) { display: inline-flex; }
+.main table th input:not([type="checkbox"]), dialog table th input:not([type="checkbox"]) { display: block; margin-left: auto; margin-right: auto; text-align: center; }
+.main table td, dialog table td { padding-left: 12px !important; padding-right: 12px !important; }
+.main table td:has(> input[type="checkbox"]:only-child), .main table th:has(> input[type="checkbox"]:only-child) { padding-left: 8px !important; padding-right: 8px !important; }
+/* the few cells that held long words in a fixed column wrap instead of clipping */
+.main .requests td, .main .rf-table td { white-space: normal; overflow-wrap: anywhere; }
+/* list tables size columns to their content so dates and status pills keep their padding */
+.main .requests, .main .ad-table--list { table-layout: auto !important; min-width: 100%; }
+.main .requests td, .main .ad-table--list td { white-space: nowrap; }
+.main .doa-tag { max-width: 100%; }
+/* header copy controls wrap inside their column instead of running past its lines */
+.main .vol-rec__copy, .main .msrp-rec__copy { white-space: normal !important; height: auto !important; text-align: left; line-height: 1.3; padding-bottom: 4px; }
+.main .vol-rec__copy span { width: auto !important; }
+.main .vs-hwrap { width: auto !important; }
+.main .vs-total { padding-left: 8px !important; padding-right: 8px !important; }
+.main .vs-chip { max-width: 100%; }
+.main table td .vol-input, .main table td .pr-status { max-width: 100%; box-sizing: border-box; }
+/* article drill-down views grow with their table (the fixed Figma heights let the actions overlap the next family) */
+.main .art-view .art-view__inner { height: auto !important; }
+.main .fam-list.has-drilldown { height: auto !important; }
