@@ -246,3 +246,47 @@ input[type="checkbox"]:not(.pp-toggle) { accent-color: var(--c-brand); }
 /* Status pills size to their label (the Figma inline widths cut longer statuses off) */
 .badge[style*="width"] { width: auto !important; max-width: none !important; }
 .badge .badge__text { overflow: visible; text-overflow: clip; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   14. ONE CONTAINER PER BLOCK (Muthu, 2026-11-03: no box inside a box)
+   A titled card keeps its frame and the tables/forms inside it sit flush with no frame of their own;
+   a plain wrapper with no title of its own loses its frame so its children are the only container.
+   ═══════════════════════════════════════════════════════════════════════ */
+/* a) plain wrappers: no frame, no padding */
+.main .cfg-card,
+.main .fam-list,
+.main .res-panels .res-panel,
+.main .wf-panel {
+  background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; border-radius: 0 !important;
+}
+.main .fam-list { height: auto; max-height: none; overflow: visible; }
+.main .res-panels .res-panel.res-card--drilldown::after { display: none; }
+
+/* b) frames inside titled cards: flush, separated by a hairline only */
+.main .projects-card .filters,
+.main .ad-card .ad-table-wrap,
+.main .es-card .table-wrap,
+.main .projects-card .table-wrap,
+.main .rp-card .rp-table-wrap,
+.main .cmp-card .cmp-metrics,
+.main .rf-card .rf-table-box,
+.main .vs-card .vs-table-wrap {
+  border: 0 !important; border-radius: 0 !important; box-shadow: none !important;
+  border-top: 1px solid var(--c-line) !important;
+}
+.main .rp-card .rp-table-wrap::after { display: none; }
+.main .projects-card .filters { background: transparent !important; padding: var(--s-md) 0 !important; border-top: 0 !important; border-bottom: 1px solid var(--c-line) !important; }
+
+/* c) Selection & Analysis: the family accordion's Overview / Price / Volume blocks are sections, not cards */
+.main .fam-panel .an-card {
+  background: transparent; border: 0; box-shadow: none; border-radius: 0; padding: 4px 0 8px;
+}
+.main .fam-panel__cards { gap: 0 28px; }
+.main .fam-panel__cards > * + * { border-left: 1px solid var(--c-line); padding-left: 28px; }
+@media (max-width: 899px) { .main .fam-panel__cards > * + * { border-left: 0; padding-left: 0; border-top: 1px solid var(--c-line); padding-top: 12px; } }
+.main .cmp-card .cmp-config { box-shadow: 0 -1px var(--c-line) !important; border-radius: 0 !important; }
+.main .cmp-card .cmp-config td, .main .cmp-card .cmp-config th { border-radius: 0 !important; }
+.main .wf-card .wf-table-wrap { border: 0 !important; border-radius: 0 !important; box-shadow: none !important; border-top: 1px solid var(--c-line) !important; }
+/* Workflow lifecycle: review stages are columns divided by hairlines, not boxed cards */
+.main .wf-card .wf-stage { background: transparent !important; border: 0 !important; box-shadow: none !important; border-radius: 0 !important; }
+.main .wf-card .wf-table-wrap::after { display: none; } .main .wf-card .wf-stage { padding: 8px 4px; }
