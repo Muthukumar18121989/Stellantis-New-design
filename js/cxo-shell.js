@@ -1,5 +1,5 @@
 /* App shell behaviour for the CXO menu bar (layout/SidebarShell):
-   - the menu bar is collapsed (72px) by default; hovering it opens it over the page (240px) without moving the content
+   - the menu bar is collapsed (72px) by default; hovering it opens it in place (240px) and the page content moves over
    - the pin button keeps it open on every page (localStorage "promotool-nav-pinned"); pressing it again collapses it
    - below 900px the menu bar is a drawer: the menu button opens it, the scrim, Escape or a nav click closes it
    Presentation only: navigation targets are the page's own links. */
