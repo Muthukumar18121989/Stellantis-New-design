@@ -234,3 +234,8 @@
   #res-panel-summary .kpi { flex: none; }
   #res-panel-summary .kpi--family .fm-wrap, #res-panel-summary .kpi--family > * { flex: none; }
 }
+
+/* Short windows (Muthu, 2026-11-03): the results area keeps a usable height and the page scrolls,
+   instead of squashing the tab content to fit the window */
+.res-body { flex: 1 0 auto; }
+.res-panels { flex: 1 0 auto; min-height: 480px; }
