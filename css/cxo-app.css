@@ -135,12 +135,12 @@
    7. BUTTONS (primitives/Btn): brand primary, ghost secondary, navy on hover
    ═══════════════════════════════════════════════════════════════════════ */
 .ad-btn--primary, .ad-dialog__btn--primary, .es-dialog__btn--primary, .pp-btn--primary, .ub--primary, .btn-next, .btn-validate, .btn-create,
-.btn-icon-primary, .rf-apply, .vs-apply, .art-apply, .rp-btn, .pd-btn:not(.pd-btn--outline), .login__submit, .rp-download__btn {
+.btn-icon-primary, .rf-apply, .vs-apply, .rp-btn, .pd-btn:not(.pd-btn--outline), .login__submit, .rp-download__btn {
   border-radius: var(--rad-md) !important; font-family: var(--font) !important; font-weight: 600 !important; letter-spacing: .02em !important;
   box-shadow: var(--shadow-1); transition: transform .15s var(--ease), box-shadow .2s var(--ease), background .15s var(--ease) !important;
 }
 .ad-btn--primary:hover, .ad-dialog__btn--primary:hover, .es-dialog__btn--primary:hover, .pp-btn--primary:hover, .ub--primary:hover, .btn-next:hover,
-.btn-validate:hover, .btn-create:hover, .btn-icon-primary:hover, .rf-apply:hover, .vs-apply:hover, .art-apply:hover, .rp-btn:hover,
+.btn-validate:hover, .btn-create:hover, .btn-icon-primary:hover, .rf-apply:hover, .vs-apply:hover, .rp-btn:hover,
 .pd-btn:not(.pd-btn--outline):hover, .login__submit:hover, .rp-download__btn:hover {
   background: var(--c-nav-bg) !important; border-color: var(--c-nav-bg) !important; box-shadow: var(--shadow-2); transform: translateY(-1px);
 }
@@ -321,3 +321,13 @@ input[type="checkbox"]:not(.pp-toggle) { accent-color: var(--c-brand); }
 /* article drill-down views grow with their table (the fixed Figma heights let the actions overlap the next family) */
 .main .art-view .art-view__inner { height: auto !important; }
 .main .fam-list.has-drilldown { height: auto !important; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   16. CHECKBOX FIELD (Muthu, 2026-11-03): a checkbox with its label is a field, not a button.
+   Hover only firms up the box outline; the label never changes. Keyboard focus shows the gold ring.
+   ═══════════════════════════════════════════════════════════════════════ */
+.art-apply, .cfg-check, .msrp-rec__copy, .vol-rec__copy { background: transparent !important; box-shadow: none !important; transform: none !important; cursor: pointer; }
+.art-apply:hover, .cfg-check:hover { color: var(--c-ink) !important; }
+label:hover > input[type="checkbox"]:not(:checked):not(:disabled),
+input[type="checkbox"]:hover:not(:checked):not(:disabled) { border-color: var(--c-brand-lt) !important; }
+input[type="checkbox"]:focus-visible { outline: 0; box-shadow: 0 0 0 3px var(--c-gold-ring) !important; }
