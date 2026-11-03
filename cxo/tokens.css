@@ -105,10 +105,10 @@
   --sidebar-expanded: 240px;
   --nav-btn: 32px;
   --shell-inset: 14px;
-  --page-pad-top: 32px;
-  --page-pad-x: 44px;
-  --page-pad-bottom: 40px;
-  --page-max: 1240px;
+  --page-pad-top: 16px;
+  --page-pad-x: 20px;
+  --page-pad-bottom: 20px;
+  --page-max: 1680px;
   --control-h: 36px;
   --control-h-sm: 28px;
   --modal-sm: 420px;

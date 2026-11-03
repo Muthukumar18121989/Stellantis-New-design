@@ -29,7 +29,7 @@
    2. RESPONSIVE FRAME (BREAKPOINT md 900 / sm 640)
    ═══════════════════════════════════════════════════════════════════════ */
 @media (max-width: 1279px) {
-  .main { padding: 24px 28px 32px; }
+  .main { padding: 14px 16px 16px; }
 }
 @media (max-width: 899px) {
   .page { padding: 0; gap: 0; }
@@ -235,3 +235,14 @@ input[type="checkbox"]:not(.pp-toggle) { accent-color: var(--c-brand); }
   .vs-card__title, .vs-card__title .res-card__title-inner { height: auto; }
   .vs-band { height: auto; flex-wrap: wrap; gap: 8px; }
 }
+
+/* 13. Wide tables (Muthu, 2026-11-03): every table frame scrolls sideways with a visible scrollbar,
+   and cells size to their content so badges and statuses are not cut off */
+.main .table-wrap, .main .ad-table-wrap, .main .cmp-scroll, .main .cmp-metrics-wrap, .main [class*="table-wrap"], .main [class*="-scroll"] { overflow-x: auto; }
+.main .table-wrap::-webkit-scrollbar, .main [class*="table-wrap"]::-webkit-scrollbar, .main [class*="-scroll"]::-webkit-scrollbar { width: 10px; height: 10px; }
+.main .table-wrap::-webkit-scrollbar-thumb, .main [class*="table-wrap"]::-webkit-scrollbar-thumb, .main [class*="-scroll"]::-webkit-scrollbar-thumb { background: var(--c-faint); border: 2px solid var(--c-card); }
+.main .table-wrap::-webkit-scrollbar-track, .main [class*="table-wrap"]::-webkit-scrollbar-track, .main [class*="-scroll"]::-webkit-scrollbar-track { background: var(--c-ink-tint2); }
+.main .table-wrap, .main [class*="table-wrap"], .main [class*="-scroll"] { scrollbar-width: auto; scrollbar-color: var(--c-faint) var(--c-ink-tint2); }
+/* Status pills size to their label (the Figma inline widths cut longer statuses off) */
+.badge[style*="width"] { width: auto !important; max-width: none !important; }
+.badge .badge__text { overflow: visible; text-overflow: clip; }
