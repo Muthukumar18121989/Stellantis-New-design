@@ -6,6 +6,7 @@
   <title>Promotool — Sign In</title>
   <link rel="stylesheet" href="cxo/fonts.css">
   <link rel="stylesheet" href="cxo/tokens.css">
+  <script>try{var t=localStorage.getItem("promotool-theme");if(/^(wallStreet|onyx|porcelain|bordeaux|upsBrand)$/.test(t))document.documentElement.setAttribute("data-cxo-theme",t)}catch(e){}</script>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/login.css">
 </head>
@@ -28,16 +29,16 @@
     </div>
     <svg class="login__chart" viewBox="0 0 520 220" aria-hidden="true">
       <defs>
-        <linearGradient id="login-area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B89B5E" stop-opacity="0.22"/><stop offset="1" stop-color="#B89B5E" stop-opacity="0"/></linearGradient>
+        <linearGradient id="login-area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-opacity="0.22" style="stop-color:var(--c-gold)"/><stop offset="1" stop-opacity="0" style="stop-color:var(--c-gold)"/></linearGradient>
       </defs>
-      <g fill="#F4F1EA" opacity="0.06">
+      <g opacity="0.06" style="fill:var(--c-on-dark)">
         <rect x="24" y="150" width="22" height="70" rx="4"/><rect x="86" y="128" width="22" height="92" rx="4"/><rect x="148" y="138" width="22" height="82" rx="4"/>
         <rect x="210" y="104" width="22" height="116" rx="4"/><rect x="272" y="112" width="22" height="108" rx="4"/><rect x="334" y="76" width="22" height="144" rx="4"/>
         <rect x="396" y="86" width="22" height="134" rx="4"/><rect x="458" y="48" width="22" height="172" rx="4"/>
       </g>
       <path d="M0 170 C60 160 80 120 130 126 S210 104 250 92 S330 88 370 62 S450 40 520 18 V220 H0 Z" fill="url(#login-area)"/>
-      <path d="M0 170 C60 160 80 120 130 126 S210 104 250 92 S330 88 370 62 S450 40 520 18" fill="none" stroke="#B89B5E" stroke-width="2" stroke-linecap="round"/>
-      <g fill="#0A1628" stroke="#B89B5E" stroke-width="2"><circle cx="130" cy="126" r="4.5"/><circle cx="250" cy="92" r="4.5"/><circle cx="370" cy="62" r="4.5"/></g>
+      <path d="M0 170 C60 160 80 120 130 126 S210 104 250 92 S330 88 370 62 S450 40 520 18" fill="none" stroke-width="2" stroke-linecap="round" style="stroke:var(--c-gold)"/>
+      <g stroke-width="2" style="fill:var(--c-nav-bg);stroke:var(--c-gold)"><circle cx="130" cy="126" r="4.5"/><circle cx="250" cy="92" r="4.5"/><circle cx="370" cy="62" r="4.5"/></g>
     </svg>
     <img class="login__logo" src="assets/logo-promotool.png" width="272" height="40" alt="Stellantis Promotool">
   </section>

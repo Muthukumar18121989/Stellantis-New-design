@@ -338,3 +338,9 @@ input[type="checkbox"]:focus-visible { outline: 0; box-shadow: 0 0 0 3px var(--c
 .main table th[data-align="right"], dialog table th[data-align="right"] { text-align: right !important; }
 .main table th[data-align="left"] > *, dialog table th[data-align="left"] > * { justify-content: flex-start !important; text-align: left !important; margin-left: 0 !important; margin-right: auto !important; }
 .main table th[data-align="right"] > *, dialog table th[data-align="right"] > * { justify-content: flex-end !important; text-align: right !important; margin-left: auto !important; margin-right: 0 !important; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   17. DARK THEME ICONS (Onyx Midnight): the icon files are drawn for light surfaces, so on the dark theme the
+   dark-stroke ones are flipped to light; the white glyphs used on filled buttons are left as they are.
+   ═══════════════════════════════════════════════════════════════════════ */
+[data-cxo-theme="onyx"] img[src*="assets/icons/"]:not([src$="hammer.svg"]):not([src$="chevron-down-white.svg"]):not([src$="grid-dots.svg"]):not([src$="database.svg"]):not([src$="check.svg"]):not([src$="plus-thin.svg"]):not([src$="tag-white.svg"]):not([src$="chart-pie-2.svg"]):not([src$="menu.svg"]):not([src$="user.svg"]):not([src$="notes-small.svg"]):not([src$="plus.svg"]):not([src$="package.svg"]):not([src$="pencil.svg"]):not([src$="circle-white-16.svg"]):not([src$="layout-grid-white.svg"]):not([src$="hierarchy.svg"]):not([src$="trending-up-white.svg"]):not([src$="check-white-16.svg"]):not([src$="check-white.svg"]):not([src$="arrow-right.svg"]):not([src$="home-white.svg"]):not([src$="report-analytics.svg"]):not([src$="refresh-white.svg"]):not([src$="chart-bar-white.svg"]):not([src$="arrow-right-16.svg"]):not([src$="route-white.svg"]) { filter: invert(.88) hue-rotate(180deg); }

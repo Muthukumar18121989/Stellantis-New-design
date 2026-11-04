@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="cxo/fonts.css">
   <link rel="stylesheet" href="cxo/tokens.css">
   <script>try{if(localStorage.getItem("promotool-nav-pinned")!=="1")document.documentElement.classList.add("is-nav-collapsed")}catch(e){document.documentElement.classList.add("is-nav-collapsed")}</script>
+  <script>try{var t=localStorage.getItem("promotool-theme");if(/^(wallStreet|onyx|porcelain|bordeaux|upsBrand)$/.test(t))document.documentElement.setAttribute("data-cxo-theme",t)}catch(e){}</script>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/configuration.css">
   <link rel="stylesheet" href="css/reports.css">
@@ -33,6 +34,7 @@
     <div class="sidebar__footer">
       <div class="sidebar__utils">
         <button class="notif sidebar__icon-btn" type="button" aria-label="Notifications (5)" title="Notifications"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="notif__count">5</span></button>
+        <button class="theme-btn sidebar__icon-btn" type="button" data-theme-open aria-haspopup="menu" aria-expanded="false" aria-label="Colour theme" title="Colour theme"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></button>
         <button class="lang" type="button" title="Language"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span class="lang__label">English</span></button>
       </div>
       <button class="profile" type="button" title="Marcus Weber, Promotion Pilot (EE)">
@@ -238,16 +240,16 @@
         </div>
         <div class="rp-el" role="img" aria-label="Price change % against volume change % for organic and promo sales">
           <svg class="rp-el__lines" width="1242" height="315" viewBox="0 0 1242 315" fill="none" aria-hidden="true">
-            <rect x="65.5" y="55.5" width="309" height="206" fill="#EAE6DC" stroke="#D9D2C4" stroke-dasharray="8 8"/>
-            <rect x="63" y="55" width="1171" height="1" fill="#D9D2C4"/>
-            <rect x="63" y="105" width="1171" height="1" fill="#D9D2C4"/>
-            <rect x="63" y="157" width="1171" height="1" fill="#D9D2C4"/>
-            <rect x="63" y="208" width="1171" height="0.9" fill="#D9D2C4"/>
-            <rect x="63" y="260.2" width="1171" height="1.8" fill="#D9D2C4"/>
-            <path transform="translate(65 66)" d="M0 1H304.911L450.346 11.029L769.801 91.2609L1171 174" stroke="#34568A" stroke-width="2"/>
-            <path transform="translate(65 98)" d="M0 1H309.028L447.264 14L776.326 62L1171 122" stroke="#B89B5E" stroke-width="2"/>
-            <path transform="translate(845 54.5)" d="M0.5 207.5V0" stroke="#9DA6B0" stroke-dasharray="10 10"/>
-            <circle cx="516.5" cy="76.5" r="4.5" fill="#34568A"/>
+            <rect x="65.5" y="55.5" width="309" height="206" stroke-dasharray="8 8" style="fill:var(--c-line);stroke:var(--c-line2)"/>
+            <rect x="63" y="55" width="1171" height="1" style="fill:var(--c-line2)"/>
+            <rect x="63" y="105" width="1171" height="1" style="fill:var(--c-line2)"/>
+            <rect x="63" y="157" width="1171" height="1" style="fill:var(--c-line2)"/>
+            <rect x="63" y="208" width="1171" height="0.9" style="fill:var(--c-line2)"/>
+            <rect x="63" y="260.2" width="1171" height="1.8" style="fill:var(--c-line2)"/>
+            <path transform="translate(65 66)" d="M0 1H304.911L450.346 11.029L769.801 91.2609L1171 174" stroke-width="2" style="stroke:var(--c-brand-lt)"/>
+            <path transform="translate(65 98)" d="M0 1H309.028L447.264 14L776.326 62L1171 122" stroke-width="2" style="stroke:var(--c-gold)"/>
+            <path transform="translate(845 54.5)" d="M0.5 207.5V0" stroke-dasharray="10 10" style="stroke:var(--c-faint)"/>
+            <circle cx="516.5" cy="76.5" r="4.5" style="fill:var(--c-brand-lt)"/>
           </svg>
           <ul class="rp-el__legend">
             <li><span class="rp-el__key rp-el__key--organic"></span>Organic</li>
@@ -336,6 +338,7 @@
   </div>
 </dialog>
 <script src="js/cxo-shell.js"></script>
+<script src="js/cxo-theme.js"></script>
 <script src="js/cxo-tables.js"></script>
 <script src="js/reports.js"></script>
   <script src="js/user-menu.js"></script>

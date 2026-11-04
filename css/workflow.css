@@ -96,8 +96,8 @@
 .wf-table th[rowspan] { height: 64px; }
 .wf-table th.wf-c-margin { text-align: center; }
 .wf-table th.wf-c-fin { text-align: right; color: var(--c-muted); }
-.wf-table th.wf-h-group { background: var(--c-brand); color: #fff; text-align: center; border-top-right-radius: var(--rad-md); }
-.wf-table th.wf-h-month { background: var(--c-brand); color: #fff; text-align: right; }
+.wf-table th.wf-h-group { background: var(--c-brand); color: var(--c-on-brand); text-align: center; border-top-right-radius: var(--rad-md); }
+.wf-table th.wf-h-month { background: var(--c-brand); color: var(--c-on-brand); text-align: right; }
 .wf-table th.wf-h-total { background: var(--c-ink-tint2); color: var(--c-muted); text-align: right; }
 
 .wf-table td { height: 68px; background: var(--c-card); vertical-align: middle; font: 600 12px/18px var(--font); color: var(--c-muted); text-align: right; }
@@ -109,7 +109,7 @@
 .wf-family > span.wf-family__meta { height: 18px; display: flex; align-items: center; gap: 8px; font-size: 10px; }
 .wf-badge {
   height: 14px; display: flex; align-items: center; padding: 1px 4px; border-radius: 4px;
-  background: rgba(168, 69, 59, 0.08); box-shadow: inset 0 0 0 0.5px var(--c-red);
+  background: color-mix(in srgb, var(--c-red) 8%, transparent); box-shadow: inset 0 0 0 0.5px var(--c-red);
   font: 400 10px/15px var(--font); color: var(--c-ink2);
 }
 .wf-table td.wf-c-margin { text-align: center; font: 500 10px/15px var(--font); color: var(--c-green); }

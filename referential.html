@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="cxo/fonts.css">
   <link rel="stylesheet" href="cxo/tokens.css">
   <script>try{if(localStorage.getItem("promotool-nav-pinned")!=="1")document.documentElement.classList.add("is-nav-collapsed")}catch(e){document.documentElement.classList.add("is-nav-collapsed")}</script>
+  <script>try{var t=localStorage.getItem("promotool-theme");if(/^(wallStreet|onyx|porcelain|bordeaux|upsBrand)$/.test(t))document.documentElement.setAttribute("data-cxo-theme",t)}catch(e){}</script>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/configuration.css">
   <link rel="stylesheet" href="css/admin.css">
@@ -37,6 +38,7 @@
     <div class="sidebar__footer">
       <div class="sidebar__utils">
         <button class="notif sidebar__icon-btn" type="button" aria-label="Notifications (5)" title="Notifications"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="notif__count">5</span></button>
+        <button class="theme-btn sidebar__icon-btn" type="button" data-theme-open aria-haspopup="menu" aria-expanded="false" aria-label="Colour theme" title="Colour theme"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></button>
         <button class="lang" type="button" title="Language"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span class="lang__label">English</span></button>
       </div>
       <button class="profile" type="button" title="Marcus Weber, Admin">
@@ -233,6 +235,7 @@
   </div>
 </div>
 <script src="js/cxo-shell.js"></script>
+<script src="js/cxo-theme.js"></script>
 <script src="js/cxo-tables.js"></script>
 <script src="js/admin.js"></script>
   <script src="js/user-menu.js"></script>

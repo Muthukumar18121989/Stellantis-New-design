@@ -34,7 +34,7 @@
 .segments { height: 36px; display: flex; align-items: stretch; gap: 16px; padding: 0 16px; }
 .segments__list { display: flex; align-items: flex-end; gap: 16px; }
 .segment { padding: 8px 16px; border-radius: var(--rad-pill); font: 600 14px/20px var(--font); letter-spacing: 0.042px; color: var(--c-muted); text-align: center; white-space: nowrap; }
-.segment--active { background: var(--c-brand); color: #fff; }
+.segment--active { background: var(--c-brand); color: var(--c-on-brand); }
 
 /* Chart cards */
 .charts { display: flex; gap: 16px; height: 402.333px; }

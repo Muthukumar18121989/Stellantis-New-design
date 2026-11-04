@@ -31,6 +31,7 @@
   }
   function peek(open) {
     if (pinned || phone.matches) return;
+    if (!open && root.classList.contains('is-theme-menu-open')) return; // keep the menu bar open while the theme menu is showing
     root.classList.toggle('is-nav-peek', open);
     root.classList.toggle('is-nav-collapsed', !open);
     label();

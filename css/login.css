@@ -60,7 +60,7 @@
 .login__forgot:hover { color: var(--c-gold-dk); }
 .login__submit {
   height: 42px; display: flex; align-items: center; justify-content: center; border-radius: var(--rad-md);
-  background: var(--c-brand); color: #fff; font: 600 13.5px/1 var(--font); letter-spacing: .02em; box-shadow: var(--shadow-1);
+  background: var(--c-brand); color: var(--c-on-brand); font: 600 13.5px/1 var(--font); letter-spacing: .02em; box-shadow: var(--shadow-1);
   transition: transform .15s var(--ease), box-shadow .2s var(--ease), background .15s var(--ease);
 }
 .login__submit:hover { background: var(--c-nav-bg); box-shadow: var(--shadow-2); transform: translateY(-1px); }

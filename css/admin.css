@@ -95,8 +95,8 @@
   display: inline-block; vertical-align: middle; padding: 4px; border-radius: 4px;
   font: 400 10px/12px var(--font); color: var(--c-ink2); text-align: center;
 }
-.doa-tag--market { width: 45px; height: 20px; background: rgba(27, 58, 107, 0.08); box-shadow: inset 0 0 0 0.5px var(--c-brand); }
-.doa-tag--promo { width: 98px; height: 44px; background: rgba(184, 155, 94, 0.096); box-shadow: inset 0 0 0 0.5px var(--c-gold-dk); }
+.doa-tag--market { width: 45px; height: 20px; background: color-mix(in srgb, var(--c-brand) 8%, transparent); box-shadow: inset 0 0 0 0.5px var(--c-brand); }
+.doa-tag--promo { width: 98px; height: 44px; background: color-mix(in srgb, var(--c-gold) 9.6%, transparent); box-shadow: inset 0 0 0 0.5px var(--c-gold-dk); }
 .doa-date { font-family: var(--font); text-align: center; }
 .doa-date--left { text-align: left; }
 .doa-table .doa-level { padding-left: 0; padding-right: 0; text-align: center; }
@@ -215,7 +215,7 @@
   background: var(--c-card); border: 1px solid var(--c-line2); border-radius: var(--rad-sm);
   font: 500 14px/20px var(--font); letter-spacing: 0.042px; color: var(--c-ink); white-space: nowrap;
 }
-.ad-btn--primary { background: var(--c-brand); border-color: var(--c-brand); color: #fff; }
+.ad-btn--primary { background: var(--c-brand); border-color: var(--c-brand); color: var(--c-on-brand); }
 
 /* ---------- Bulk Upload Preview (Figma 100:49079, 2239 × 586) ---------- */
 .page--preview { min-height: max(586px, 100vh); }
@@ -243,7 +243,7 @@
   background: var(--c-card); border: 1px solid var(--c-line2); border-radius: var(--rad-md);
   font: 500 16px/24px var(--font); letter-spacing: 0.032px; color: var(--c-ink); white-space: nowrap;
 }
-.ad-dialog__btn--primary { background: var(--c-brand); border-color: var(--c-brand); color: #fff; }
+.ad-dialog__btn--primary { background: var(--c-brand); border-color: var(--c-brand); color: var(--c-on-brand); }
 
 .ad-dialog--bulk { width: 741px; height: 260px; }
 .ad-dialog--bulk[open] { gap: 32px; }
@@ -391,7 +391,7 @@
 .pp-level--off { opacity: 0.24; }
 .pp-level__head { height: 17px; display: flex; justify-content: space-between; align-items: flex-start; }
 .pp-badge {
-  height: 17px; padding: 1px 4px; border-radius: 4px; background: rgba(184, 155, 94, 0.096); box-shadow: inset 0 0 0 0.5px var(--c-gold-dk);
+  height: 17px; padding: 1px 4px; border-radius: 4px; background: color-mix(in srgb, var(--c-gold) 9.6%, transparent); box-shadow: inset 0 0 0 0.5px var(--c-gold-dk);
   font: 400 10px/15px var(--font); color: var(--c-ink2); white-space: nowrap;
 }
 .pp-level--off .pp-badge { margin-left: 1px; }
@@ -407,7 +407,7 @@
   height: 32px; padding: 5px 11px; background: var(--c-card); border: 1px solid var(--c-line2); border-radius: var(--rad-sm);
   font: 500 14px/20px var(--font); letter-spacing: 0.042px; color: var(--c-ink); white-space: nowrap;
 }
-.pp-btn--primary { background: var(--c-brand); border-color: var(--c-brand); color: #fff; }
+.pp-btn--primary { background: var(--c-brand); border-color: var(--c-brand); color: var(--c-on-brand); }
 
 /* ═══ CXO design system: OpsCard, DataTable, OpsPill tags, Field forms, SidePanel drawer ═══ */
 .ad-card { padding: 18px; border-color: var(--c-line); background: var(--card-elevated); box-shadow: var(--shadow-1); }
@@ -450,8 +450,8 @@
 .rm-legend li:nth-child(n) { width: auto; }
 .rm-swatch { border-radius: var(--rad-pill); width: 14px; height: 14px; }
 .rm-cap { width: auto !important; height: auto; padding: 3px 9px; border-radius: var(--rad-pill); font: 700 10px/1.35 var(--font); letter-spacing: .04em; }
-.rm-swatch--orange, .rm-cap--orange { background: var(--c-amber-bg); border-color: rgba(181, 134, 44, .45); color: var(--c-amber); }
-.rm-swatch--blue, .rm-cap--blue { background: var(--c-brand-tint); border-color: rgba(27, 58, 107, .35); color: var(--c-brand); }
+.rm-swatch--orange, .rm-cap--orange { background: var(--c-amber-bg); border-color: color-mix(in srgb, var(--c-amber) 45%, transparent); color: var(--c-amber); }
+.rm-swatch--blue, .rm-cap--blue { background: var(--c-brand-tint); border-color: color-mix(in srgb, var(--c-brand) 35%, transparent); color: var(--c-brand); }
 .rm-swatch--grey, .rm-cap--grey { background: var(--c-ink-tint2); border-color: var(--c-line2); color: var(--c-muted); }
 
 .ue-field__label, .ue-field--noto .ue-field__label, .ue-field--noto-small .ue-field__label { white-space: normal; }

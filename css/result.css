@@ -18,7 +18,7 @@
 }
 .iteration__value {
   flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: left;
-  font: 400 14px/20px var(--font); letter-spacing: 0.042px; color: #fff;
+  font: 400 14px/20px var(--font); letter-spacing: 0.042px; color: var(--c-on-brand);
 }
 
 .res-body { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 12px; padding: 16px 24px 20px; }
@@ -204,7 +204,7 @@
 .art-list .is-center { text-align: center; }
 .th-icon { display: inline-flex; align-items: center; gap: 10px; vertical-align: middle; }
 .uplift { display: inline-block; vertical-align: middle; padding: 1px 4px; border-radius: 4px; font: 400 10px/15px var(--font); }
-.uplift--up { background: rgba(45, 107, 74, 0.108); box-shadow: inset 0 0 0 0.5px var(--c-green); color: var(--c-green); }
+.uplift--up { background: color-mix(in srgb, var(--c-green) 10.8%, transparent); box-shadow: inset 0 0 0 0.5px var(--c-green); color: var(--c-green); }
 .uplift--down { background: rgba(254, 174, 174, 0.31); box-shadow: inset 0 0 0 0.5px var(--c-red); color: var(--c-red); }
 
 .info { flex: none; }

@@ -30,14 +30,14 @@
   display: inline-flex; align-items: center; justify-content: center; height: 20px; padding: 4px; border-radius: 4px;
   font: 400 10px/12px var(--font); color: var(--c-ink2); white-space: nowrap;
 }
-.pd-tag--grey { background: rgba(217, 210, 196, 0.08); box-shadow: inset 0 0 0 1px rgba(217, 210, 196, 0.5); }
-.pd-tag--blue { background: rgba(27, 58, 107, 0.08); box-shadow: inset 0 0 0 1px rgba(27, 58, 107, 0.5); }
-.pd-tag--purple { background: rgba(52, 86, 138, 0.08); box-shadow: inset 0 0 0 1px rgba(52, 86, 138, 0.5); }
-.pd-tag--olive { background: rgba(45, 107, 74, 0.08); box-shadow: inset 0 0 0 1px rgba(45, 107, 74, 0.5); }
+.pd-tag--grey { background: color-mix(in srgb, var(--c-line2) 8%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-line2) 50%, transparent); }
+.pd-tag--blue { background: color-mix(in srgb, var(--c-brand) 8%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-brand) 50%, transparent); }
+.pd-tag--purple { background: color-mix(in srgb, var(--c-brand-lt) 8%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-brand-lt) 50%, transparent); }
+.pd-tag--olive { background: color-mix(in srgb, var(--c-green) 8%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-green) 50%, transparent); }
 .pd-tag--orange { background: rgba(242, 113, 28, 0.08); box-shadow: inset 0 0 0 1px rgba(242, 113, 28, 0.5); }
 .pd-tag--entries {
   font-style: normal; font-weight: 500; color: var(--c-faint);
-  background: rgba(217, 210, 196, 0.08); box-shadow: inset 0 0 0 1px rgba(217, 210, 196, 0.5);
+  background: color-mix(in srgb, var(--c-line2) 8%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-line2) 50%, transparent);
 }
 
 /* ---------- Promotion title bar ---------- */
@@ -78,7 +78,7 @@
 }
 .pd-config__row {
   display: flex; align-items: center; gap: 8px; height: 30px;
-  background: linear-gradient(rgba(234, 230, 220, 0.5), rgba(234, 230, 220, 0.5)) left bottom / 100% 1px no-repeat;
+  background: linear-gradient(color-mix(in srgb, var(--c-line) 50%, transparent), color-mix(in srgb, var(--c-line) 50%, transparent)) left bottom / 100% 1px no-repeat;
 }
 .pd-config__row--badge { height: 37px; }
 .pd-config__row--top { align-items: flex-start; padding-top: 6px; }
@@ -90,9 +90,9 @@
   display: inline-flex; align-items: center; height: 25px; padding: 4px; border-radius: 4px;
   font: 600 14px/17px var(--font); white-space: nowrap;
 }
-.pd-value-badge--purple { color: var(--c-brand-lt); background: rgba(52, 86, 138, 0.08); box-shadow: inset 0 0 0 1px rgba(52, 86, 138, 0.5); }
-.pd-value-badge--blue { color: var(--c-brand); background: rgba(0, 95, 197, 0.08); box-shadow: inset 0 0 0 1px rgba(27, 58, 107, 0.5); }
-.pd-value-badge--green { color: var(--c-green); background: rgba(0, 197, 36, 0.08); box-shadow: inset 0 0 0 1px rgba(45, 107, 74, 0.5); }
+.pd-value-badge--purple { color: var(--c-brand-lt); background: color-mix(in srgb, var(--c-brand-lt) 8%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-brand-lt) 50%, transparent); }
+.pd-value-badge--blue { color: var(--c-brand); background: rgba(0, 95, 197, 0.08); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-brand) 50%, transparent); }
+.pd-value-badge--green { color: var(--c-green); background: rgba(0, 197, 36, 0.08); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-green) 50%, transparent); }
 
 /* KPI cards */
 .pd-kpis { display: flex; flex-direction: column; gap: 16px; }
@@ -217,7 +217,7 @@
 .pd-tag--orange { background: var(--c-amber-bg); color: var(--c-amber); }
 .pd-tag--entries { font-weight: 700; letter-spacing: .08em; text-transform: none; }
 
-.pd-live { height: auto; min-height: 40px; padding: 10px 16px; border-radius: var(--rad-md); box-shadow: inset 0 0 0 1px rgba(45, 107, 74, .25); font: 500 12.5px/1.5 var(--font); }
+.pd-live { height: auto; min-height: 40px; padding: 10px 16px; border-radius: var(--rad-md); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-green) 25%, transparent); font: 500 12.5px/1.5 var(--font); }
 .pd-actions { flex-wrap: wrap; gap: 10px; }
 .pd-btn { height: var(--control-h); padding: 0 16px; font: 600 13px/1 var(--font); }
 

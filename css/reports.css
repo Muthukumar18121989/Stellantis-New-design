@@ -12,7 +12,7 @@
 .rp-header__title { position: absolute; left: 0; top: 21px; }
 .rp-btn {
   height: 32px; display: flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: var(--rad-sm);
-  background: var(--c-brand); font: 500 14px/20px var(--font); letter-spacing: 0.042px; color: #fff; white-space: nowrap;
+  background: var(--c-brand); font: 500 14px/20px var(--font); letter-spacing: 0.042px; color: var(--c-on-brand); white-space: nowrap;
 }
 .rp-btn--download { margin-top: 11px; }
 
@@ -22,7 +22,7 @@
 /* ---------- Tabs (Figma 13313:64989) ---------- */
 .rp-tabs { height: 36px; display: flex; gap: 16px; padding: 0 16px; }
 .rp-tab { height: 36px; padding: 8px 16px; border-radius: var(--rad-pill); font: 600 14px/20px var(--font); letter-spacing: 0.042px; color: var(--c-muted); white-space: nowrap; }
-.rp-tab.is-active { background: var(--c-brand); color: #fff; }
+.rp-tab.is-active { background: var(--c-brand); color: var(--c-on-brand); }
 .rp-tab:first-child { width: 112px; } /* Figma tab widths; Chrome sets the labels about a pixel narrower */
 .rp-tab:last-child { width: 166px; }
 

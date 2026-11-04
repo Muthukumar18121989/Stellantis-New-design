@@ -17,12 +17,12 @@
 }
 .config-card__main {
   width: 241px; flex: none; display: flex; flex-direction: column; align-items: center; gap: 6px;
-  padding: 16px 7px 16px 8px; border-right: 1px solid rgba(234, 230, 220, 0.25);
+  padding: 16px 7px 16px 8px; border-right: 1px solid color-mix(in srgb, var(--c-line) 25%, transparent);
 }
 .config-card__icon { position: relative; width: 42px; height: 42px; }
 .config-card__icon > img:first-child { position: absolute; inset: 0; }
 .config-card__icon > img + img { position: absolute; left: 9.18px; top: 9.24px; width: 24.643px; height: 23.616px; }
-.config-card__label { font: 600 16px/20px var(--font); letter-spacing: 0.048px; color: #fff; text-align: center; white-space: nowrap; }
+.config-card__label { font: 600 16px/20px var(--font); letter-spacing: 0.048px; color: var(--c-on-dark); text-align: center; white-space: nowrap; }
 .config-card__types { align-self: stretch; display: flex; align-items: center; }
 .config-card__types--grow { flex: 1; min-width: 0; }
 .types { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
@@ -146,7 +146,7 @@ td .promos__id { gap: 8px; }
 .radio input:checked { border: 0; background: radial-gradient(circle, var(--c-card) 0 3px, var(--c-brand) 3px); }
 .radio--disabled { color: var(--c-faint); }
 .new-promo__footer { display: flex; justify-content: flex-end; }
-.btn-create { display: flex; align-items: center; justify-content: center; padding: 8px 16px; background: var(--c-brand); border-radius: var(--rad-md); font: 500 16px/24px var(--font); letter-spacing: 0.032px; color: #fff; white-space: nowrap; }
+.btn-create { display: flex; align-items: center; justify-content: center; padding: 8px 16px; background: var(--c-brand); border-radius: var(--rad-md); font: 500 16px/24px var(--font); letter-spacing: 0.032px; color: var(--c-on-brand); white-space: nowrap; }
 
 .text-input {
   flex: 1; min-width: 0; height: 32px; padding: 5px 11px; outline: 0;
@@ -195,7 +195,7 @@ td .promos__id { gap: 8px; }
 .wh-dialog__title { height: 24px; margin: 0 0 12px; font: 500 20px/24px var(--font); color: var(--c-ink); white-space: nowrap; }
 .wh-promo { width: 819px; height: 56px; display: flex; margin: 0 0 8px; overflow: hidden; background: var(--c-muted); border-radius: var(--rad-sm); }
 .wh-promo__col { display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 0 16px; }
-.wh-promo dt, .wh-promo dd { margin: 0; font: 400 12px/20px var(--font); color: #fff; white-space: nowrap; }
+.wh-promo dt, .wh-promo dd { margin: 0; font: 400 12px/20px var(--font); color: var(--c-on-dark); white-space: nowrap; }
 .wh-promo dd { font-weight: 600; }
 .wh-table-wrap { width: 820px; height: 321px; overflow: hidden; border-radius: var(--rad-sm); box-shadow: inset 0 0 0 1px var(--c-line); }
 .wh-table { position: relative; z-index: -1; width: 820px; table-layout: fixed; border-collapse: collapse; }
@@ -216,7 +216,7 @@ td .promos__id { gap: 8px; }
 .wh-badge--approved { background: var(--c-green-bg); border-color: var(--c-green); color: var(--c-green); }
 .wh-badge--rejected { background: var(--c-red-bg); border-color: var(--c-red); color: var(--c-red); }
 .wh-dialog__actions { width: 820px; display: flex; justify-content: flex-end; margin-top: 14px; } /* Figma: 820px, 11px into the right padding */
-.wh-dialog__ok { display: flex; align-items: center; justify-content: center; width: 55px; height: 40px; background: var(--c-brand); border-radius: var(--rad-md); font: 500 16px/24px var(--font); letter-spacing: 0.032px; color: #fff; }
+.wh-dialog__ok { display: flex; align-items: center; justify-content: center; width: 55px; height: 40px; background: var(--c-brand); border-radius: var(--rad-md); font: 500 16px/24px var(--font); letter-spacing: 0.032px; color: var(--c-on-brand); }
 
 /* ═══ CXO design system: dark Products / Network strip, OpsCard workspace, DataTable rows, icon actions ═══ */
 .config-card { border-radius: var(--rad-lg); }
