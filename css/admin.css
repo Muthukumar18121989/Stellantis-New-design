@@ -502,3 +502,6 @@ dialog.pp-panel { inset: 0 0 0 auto; width: min(721px, 100vw) !important; height
   .doa-title__text, .doa-title__desc { white-space: normal; }
   .doa-add { position: static; align-self: flex-start; margin: 8px 0 4px; }
 }
+/* the pencil glyph is white: keep the filled tile as in the legacy table (Muthu, 2026-11-04) */
+.doa-edit { background: var(--c-slate); border-color: var(--c-slate); }
+.doa-edit:hover { background: var(--c-brand); border-color: var(--c-brand); }
