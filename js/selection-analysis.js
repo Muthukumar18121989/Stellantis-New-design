@@ -57,13 +57,17 @@
   dialog.querySelector('[data-apply-selection]').addEventListener('click', function () {
     var chosen = rows.filter(function (c) { return c.checked; });
     list.textContent = '';
-    chosen.forEach(function (c) {
+    chosen.forEach(function (c, i) {
       var cells = c.closest('tr').cells;
       var panel = template.content.firstElementChild.cloneNode(true);
       var title = c.value + ' - ' + cells[1].textContent.trim();
       panel.querySelector('[data-family-title]').textContent = title;
       panel.querySelector('[data-toggle-family]').setAttribute('aria-label', title);
       panel.dataset.compClass = cells[5].textContent.trim();
+      if (i > 0) { // only the first family starts open; the rest open from their chevron (Muthu, 2026-11-04)
+        panel.classList.add('is-collapsed');
+        panel.querySelector('[data-toggle-family]').setAttribute('aria-expanded', 'false');
+      }
       list.appendChild(panel);
     });
     list.hidden = !chosen.length;
