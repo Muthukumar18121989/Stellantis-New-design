@@ -344,3 +344,8 @@ input[type="checkbox"]:focus-visible { outline: 0; box-shadow: 0 0 0 3px var(--c
    dark-stroke ones are flipped to light; the white glyphs used on filled buttons are left as they are.
    ═══════════════════════════════════════════════════════════════════════ */
 [data-cxo-theme="onyx"] img[src*="assets/icons/"]:not([src$="hammer.svg"]):not([src$="chevron-down-white.svg"]):not([src$="grid-dots.svg"]):not([src$="database.svg"]):not([src$="check.svg"]):not([src$="plus-thin.svg"]):not([src$="tag-white.svg"]):not([src$="chart-pie-2.svg"]):not([src$="menu.svg"]):not([src$="user.svg"]):not([src$="notes-small.svg"]):not([src$="plus.svg"]):not([src$="package.svg"]):not([src$="pencil.svg"]):not([src$="circle-white-16.svg"]):not([src$="layout-grid-white.svg"]):not([src$="hierarchy.svg"]):not([src$="trending-up-white.svg"]):not([src$="check-white-16.svg"]):not([src$="check-white.svg"]):not([src$="arrow-right.svg"]):not([src$="home-white.svg"]):not([src$="report-analytics.svg"]):not([src$="refresh-white.svg"]):not([src$="chart-bar-white.svg"]):not([src$="arrow-right-16.svg"]):not([src$="route-white.svg"]) { filter: invert(.88) hue-rotate(180deg); }
+
+/* 18. Actions Status column (experiments, experiment status): header on one line, left edge level with the first action icon */
+.main table th.promos__actions-th { text-align: left !important; white-space: nowrap; padding-left: 14px !important; }
+.main .promos td.promos__actions, .main .promos td.es-actions { padding-left: 14px !important; text-align: left; }
+.main .promos__actions-inner, .main .es-actions__inner { justify-content: flex-start !important; }
